@@ -1,0 +1,21 @@
+<div class='container'>
+    <div class='row'>
+        <div class='col-sm-12 col-md-12 text-center'>
+            <h1>Add a new Topic </h1>
+
+        </div>      
+    </div>
+
+    <div class='row'>
+        <div class='col-sm-12 col-md-12 text-center'>
+
+            <%= form_for @changeset, Routes.topic_path(@conn, :store), fn f -> %>
+                    <div class='form-group'>
+                        <%= text_input f, :title, placeholder: "Topic Title", class: "form-control" %>
+                        <%= submit "Create", class: "btn btn-primary" %>
+                    </div>
+            <% end %>
+
+        </div>
+    </div>      
+</div>
