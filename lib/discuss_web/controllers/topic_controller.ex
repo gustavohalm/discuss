@@ -9,7 +9,8 @@ defmodule DiscussWeb.TopicController do
     end
 
     def show(conn, %{"id" => id}) do
-        render(conn, "show.html")
+        topic = Repo.get(Topic, id)
+        render conn, "show.html", topic: topic
     end
     
     def new(conn, params) do

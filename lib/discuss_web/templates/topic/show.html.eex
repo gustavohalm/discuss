@@ -1,0 +1,16 @@
+<div class='container'>
+    <div class='row'>
+        <div class='col-sm-12 text-center'>
+            <br>
+            <h1> <%= @topic.title %></h1>
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-sm-12 text-center'>
+            <h6>Discuss: </h6>
+        </div>
+    </div>
+</div>
