@@ -3,11 +3,13 @@ defmodule DiscussWeb.TopicController do
     alias DiscussWeb.Topic
     alias Discuss.Repo
     def index(conn, _params) do
-        render(conn, "index.html")
+        topics = Repo.all(Topic)
+        |> IO.inspect
+        render conn, "index.html", topics: topics 
     end
 
     def show(conn, %{"id" => id}) do
-        
+        render(conn, "show.html")
     end
     
     def new(conn, params) do
