@@ -18,6 +18,18 @@ defmodule DiscussWeb.TopicController do
         render conn, "new.html", changeset: changeset
     end
     
+    def edit(conn, %{"id" => id}) do
+        topic = Repo.get(Topic, id)
+        changeset = DiscussWeb.Topic.changeset(%Topic{}, %{})
+        render conn, "edit.html", changeset: changeset, topic: topic
+    end
+    
+    def update(conn, params) do
+        %{"topic" => topic} = params
+        Repo.update(topic)
+        |> IO.inspect
+    end
+
     def store(conn, params) do
         %{"topic" => topic} = params
         changeset = DiscussWeb.Topic.changeset(%Topic{}, topic)

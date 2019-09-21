@@ -13,4 +13,13 @@
             <h6>Discuss: </h6>
         </div>
     </div>
+<br>
+    <p> <-- Comments list --></p>
+    <div class='row'>
+        <div class='col-sm-12 text-center'>
+           <div class='form-group'>
+            </div>
+        </div>
+    </div>
+            
 </div>

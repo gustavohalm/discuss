@@ -22,7 +22,7 @@ defmodule DiscussWeb.Router do
     get "/topics/new", TopicController, :new
     post "/topics/new", TopicController, :store
     get "/topics/:id", TopicController, :show
-
+    get "/topics/:id/edit", TopicController, :edit
   end
 
   # Other scopes may use custom stacks.
